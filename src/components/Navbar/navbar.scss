@@ -1,0 +1,71 @@
+@import "../../index.scss";
+
+.nav {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "logo button"
+      "list list";
+  }
+
+  @include mobile {
+    padding: 16px;
+  }
+
+  &__logo {
+    max-width: 38px;
+
+    @include tablet {
+      grid-area: logo;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+
+    @include tablet {
+      grid-area: list;
+    }
+
+    @include mobile {
+      gap: 32px;
+    }
+  }
+
+  &__item {
+    justify-self: center;
+    list-style: none;
+    font-size: 14px;
+    color: #a0a3a7;
+    cursor: pointer;
+  }
+
+  &__button {
+    justify-self: end;
+    background: linear-gradient(93.22deg, #e1e1e1 8.37%, #ffffff 99.95%);
+    border-radius: 25px;
+    font-size: 14px;
+    color: #24282e;
+    padding: 16px 24px;
+    cursor: pointer;
+
+    @include tablet {
+      grid-area: button;
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      grid-area: button;
+      margin-bottom: 10px;
+      font-size: 12px;
+      padding: 8px 13px;
+    }
+  }
+}

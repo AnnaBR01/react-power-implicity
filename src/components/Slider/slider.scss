@@ -1,0 +1,101 @@
+@import "../../index.scss";
+
+.slider {
+  padding: 184px 28% 229px;
+
+  @include tablet {
+    padding: 92px 28% 115px;
+  }
+
+  @include mobile {
+    padding: 46px 28% 57px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__slide {
+    text-align: center;
+    color: #f2f4f7;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 83px;
+
+    @include tablet {
+      font-size: 36px;
+      line-height: 42px;
+    }
+
+    @include mobile {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+    margin-top: 32px;
+    font-weight: 300;
+    line-height: 21px;
+
+    @include tablet {
+      font-size: 16px;
+      margin-top: 18px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      margin-top: 16px;
+    }
+  }
+
+  &__button {
+    font-size: 18px;
+    margin-top: 80px;
+    padding: 16px 96px;
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, #fc4060, #8061fd);
+    background-clip: text;
+    color: transparent;
+    border-image: linear-gradient(45deg, #fc4060, #8061fd);
+    border-image-slice: 1;
+
+    @include tablet {
+      font-size: 16px;
+      margin-top: 60px;
+      padding: 10px 48px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      margin-top: 40px;
+      padding: 8px 40px;
+    }
+  }
+
+  &__dots {
+    margin-top: 64px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 35px;
+
+    @include tablet {
+      margin-top: 35px;
+      padding: 10px;
+      gap: 17px;
+    }
+
+    @include mobile {
+      margin-top: 25px;
+      padding: 8px;
+      gap: 10px;
+    }
+  }
+}
