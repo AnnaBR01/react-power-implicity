@@ -8,8 +8,8 @@ export const App = () => {
   return (
     <div className="app">
       <div className="app__content">
-        <Navbar></Navbar>
-        <Slider></Slider>
+        <Navbar />
+        <Slider />
       </div>
     </div>
   );

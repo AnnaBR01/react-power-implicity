@@ -56,30 +56,21 @@
   }
 
   &__button {
-    font-size: 18px;
     margin-top: 80px;
-    padding: 16px 96px;
-    border: 2px solid transparent;
-    background: linear-gradient(45deg, #fc4060, #8061fd);
-    background-clip: text;
-    color: transparent;
-    border-image: linear-gradient(45deg, #fc4060, #8061fd);
-    border-image-slice: 1;
+    background: none;
+    border: none;
 
     @include tablet {
-      font-size: 16px;
       margin-top: 60px;
-      padding: 10px 48px;
     }
 
     @include mobile {
-      font-size: 14px;
       margin-top: 40px;
-      padding: 8px 40px;
     }
   }
 
   &__dots {
+    list-style: none;
     margin-top: 64px;
     padding: 16px;
     display: grid;
@@ -96,6 +87,27 @@
       margin-top: 25px;
       padding: 8px;
       gap: 10px;
+    }
+  }
+
+  &__dot {
+    width: 16px;
+    height: 16px;
+    border: 3.5px solid rgba(196, 196, 196, 0.16);
+    border-radius: 50%;
+
+    @include tablet {
+      width: 13px;
+      height: 13px;
+    }
+
+    @include mobile {
+      width: 10px;
+      height: 10px;
+    }
+
+    &--active {
+      border-color: #ffffff;
     }
   }
 }

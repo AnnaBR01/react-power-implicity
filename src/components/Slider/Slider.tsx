@@ -1,6 +1,5 @@
+import button from "../../assets/slider-button.png";
 import "./slider.scss";
-import { ReactComponent as Dot } from "../../assets/dot.svg";
-import { ReactComponent as DotActive } from "../../assets/dot-active.svg";
 
 export const Slider = () => {
   return (
@@ -12,15 +11,17 @@ export const Slider = () => {
             Instead of spending time searching for the right app, our AI will
             bring the right app to you.
           </p>
-          <button className="slider__button">Learn</button>
+          <button className="slider__button" type="button">
+            <img src={button} alt="button" />
+          </button>
         </div>
-        <div className="slider__dots">
-          <Dot className="slider__dot" />
-          <Dot className="slider__dot" />
-          <DotActive className="slider__dot" />
-          <Dot className="slider__dot" />
-          <Dot className="slider__dot" />
-        </div>
+        <ul className="slider__dots">
+          <li className="slider__dot"></li>
+          <li className="slider__dot"></li>
+          <li className="slider__dot slider__dot--active"></li>
+          <li className="slider__dot"></li>
+          <li className="slider__dot"></li>
+        </ul>
       </div>
     </div>
   );
